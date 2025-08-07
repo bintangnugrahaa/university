@@ -17,7 +17,7 @@ class FooterResource extends Resource
 {
     protected static ?string $model = Footer::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-bars-3-bottom-left';
 
     public static function form(Form $form): Form
     {
