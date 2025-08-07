@@ -45,4 +45,20 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Get the news for the user.
+     */
+    public function news()
+    {
+        return $this->hasMany(News::class, 'users_id');
+    }
+
+    /**
+     * Get the announcements for the user.
+     */
+    public function announcements()
+    {
+        return $this->hasMany(Announcement::class, 'users_id');
+    }
 }
