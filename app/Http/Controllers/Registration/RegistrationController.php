@@ -32,7 +32,7 @@ class RegistrationController extends Controller
             $fotoName = time() . '_' . $request->file('image')->getClientOriginalName();
             $path = $request->file('image')->storeAs('', $fotoName, 'public');
             if (!$path) {
-                return back()->with('error', 'Gambar gagal disimpan!');
+                return back()->with('error', 'The image could not be saved.');
             }
         }
 
@@ -47,6 +47,6 @@ class RegistrationController extends Controller
             'second_study_program' => $request->input('programstudi_2'),
         ]);
 
-        return back()->with('success', 'Data berhasil ditambahkan!');
+        return back()->with('success', 'Your registration has been submitted successfully.');
     }
 }

@@ -6,11 +6,11 @@
             class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]">
             <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
                 <h1 class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7">
-                    Menyatukan Ilmu dan Iman untuk Masa Depan Cerah
+                    Uniting Knowledge and Faith for a Brighter Future
                 </h1>
-                <span class="text-lg md:text-xl text-white font-montserrat font-medium">Kami berkomitmen mendidik generasi
-                    unggul yang menjunjung tinggi
-                    nilai agama dan kecemerlangan akademik.</span>
+                <span class="text-lg md:text-xl text-white font-montserrat font-medium">We are dedicated to educating
+                    exceptional generations who uphold
+                    moral values and achieve academic excellence.</span>
             </div>
             <img src="../assets/images/hero-illustration-1.png" class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
                 alt="Hero Image" />
@@ -19,11 +19,11 @@
             class="absolute top-0 animate-fade left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]">
             <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
                 <h1 class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7">
-                    Menuju Pendidikan Berdaya Saing Global
+                    Advancing Education with Global Competitiveness
                 </h1>
-                <span class="text-lg md:text-xl text-white font-montserrat font-medium">Teknik pembelajaran yang memadukan
-                    tradisi keilmuan Agama dengan
-                    inovasi modern.</span>
+                <span class="text-lg md:text-xl text-white font-montserrat font-medium">An educational approach that blends
+                    religious scholarship with
+                    modern innovation.</span>
             </div>
             <img src="../assets/images/hero-illustration-2.png"
                 class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5" alt="Hero Image" />
@@ -32,11 +32,11 @@
             class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]">
             <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
                 <h1 class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7">
-                    Menciptakan Generasi Berakhlak dan Berwawasan
+                    Shaping Morally Upright and Visionary Generations
                 </h1>
-                <span class="text-lg md:text-xl text-white font-montserrat font-medium">Kami hadir untuk membimbing Anda
-                    dalam meraih prestasi akademik dan
-                    menjadi agen perubahan di dunia.</span>
+                <span class="text-lg md:text-xl text-white font-montserrat font-medium">We are committed to guiding you
+                    towards academic excellence and
+                    empowering you to become an agent of change in the world.</span>
             </div>
             <img src="../assets/images/hero-illustration-3.png"
                 class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5" alt="Hero Image" />
@@ -46,7 +46,7 @@
     <div
         class="container overflow-hidden w-fit md:px-16 py-5 rounded-3xl mx-4 sm:mx-auto -mt-32 bg-white z-10 relative shadow-2xl">
         <h3 class="text-xl sm:text-2xl text-center w-full font-semibold font-montserrat mb-4">
-            Bekerjasama Dengan
+            In Collaboration With
         </h3>
 
         <div class="flex overflow-x-auto gap-16">
@@ -56,7 +56,7 @@
                 </p>
             @else
                 @foreach ($cooperationImg as $image)
-                    <img class="w-12 md:w-fit" src="{{ asset('storage/' . $image->image) }}" alt="Cooperation" />
+                    <img class="w-12 md:w-fit" src="{{ asset('storage/' . $image->image) }}" alt="Cooperation Partner" />
                 @endforeach
             @endif
         </div>
@@ -69,25 +69,24 @@
         <div class="container grid grid-cols-1 md:grid-cols-2 items-center gap-12">
             <div class="space-y-4 lg:ml-20">
                 <h3 class="text-primary-200 font-bold text-xl sm:text-2xl font-montserrat">
-                    TENTANG KAMI
+                    ABOUT US
                 </h3>
                 @if (empty($abouts->content) && empty($abouts->image))
-                    <!-- Check if both content and images are empty -->
                     <p class="font-montserrat text-lg sm:text-xl font-semibold text-xneutral-200">
                         No data available
                     </p>
                 @else
                     <p class="font-montserrat text-2xl sm:text-4xl font-semibold">
-                        Membangun generasi
-                        <span class="text-secondary-purple">unggul</span> dan
-                        <span class="text-secondary-pink">berakhlak</span>
+                        Nurturing
+                        <span class="text-secondary-purple">excellence</span> and
+                        <span class="text-secondary-pink">integrity</span>
                     </p>
                     <p class="text-base sm:text-lg font-semibold text-xneutral-200 font-montserrat">
                         {{ $abouts->content }}
                     </p>
                     <a href="{{ route('sejarah') }}"
-                        class="px-6 py-[14px] font-montserrat text-neutral-0 bg-white border w-fit text-lg font-semibold border-primary-200 text-primary-200 rounded-full flex gap-[10px]"><span>Tentang
-                            kami</span>
+                        class="px-6 py-[14px] font-montserrat text-neutral-0 bg-white border w-fit text-lg font-semibold border-primary-200 text-primary-200 rounded-full flex gap-[10px]"><span>About
+                            Us</span>
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 @endif
@@ -116,10 +115,10 @@
         <div class="mb-10 flex justify-between items-center">
             <div>
                 <h3 class="font-semibold text-xl sm:text-2xl font-montserrat text-xneutral-400">
-                    Berita terkini untuk Anda
+                    Latest News for You
                 </h3>
                 <p class="text-sm sm:text-base font-montserrat text-xneutral-200 font-semibold">
-                    Temukan berita terbaru hari ini
+                    Stay updated with today’s top stories
                 </p>
             </div>
             <div>
@@ -143,7 +142,7 @@
                     <div class="p-[14px] rounded-[20px] border border-xneutral-100 bg-xneutral-0">
                         <div class="max-h-[214px] rounded-2xl overflow-hidden mb-5">
                             <img src="{{ asset('storage/' . $newslist->image) }}" alt="{{ $newslist->title }}"
-                                alt="Berita 1" />
+                                alt="News Image" />
                         </div>
                         <a href="{{ route('berita.show', $newslist->slug) }}"
                             class="text-base sm:text-lg font-montserrat font-semibold text-xneutral-400 line-clamp-2">
@@ -166,15 +165,14 @@
     <section class="container mt-28">
         <div class="text-center space-y-2">
             <h3 class="font-montserrat font-semibold text-xneutral-400 text-xl sm:text-2xl">
-                Rektorat B-Universitas
+                B-University Rectorate
             </h3>
             <p class="font-montserrat text-sm sm:text-base font-semibold text-xneutral-200">
-                Berkomitmen untuk meningkatkan kualitas Pendidikan
+                Dedicated to enhancing the quality of education
             </p>
         </div>
         <div class="grid grid-cols-2 gap-12 lg:grid-cols-4 mt-11 text-center">
             @if ($rectors->isEmpty())
-                <!-- Check if the collection is empty -->
                 <div class="col-span-2 lg:col-span-4">
                     <p class="text-xneutral-200 font-montserrat text-lg">
                         No data available
@@ -187,10 +185,10 @@
                             <img src="{{ asset('storage/' . $rektor->image) }}" alt="{{ $rektor->nama }}" />
                         </div>
                         <p class="mb-[2px] text-sm sm:text-base text-xneutral-400 font-semibold font-montserrat">
-                            {{ $rektor->nama }}
+                            {{ $rektor->name }}
                         </p>
                         <p class="mb-[2px] text-xs sm:text-sm text-xneutral-200 font-semibold font-montserrat">
-                            {{ $rektor->jabatan }}
+                            {{ $rektor->position }}
                         </p>
                     </div>
                 @endforeach
@@ -205,10 +203,10 @@
             <div class="mb-10 flex justify-between items-center">
                 <div>
                     <h3 class="font-semibold text-xl sm:text-2xl font-montserrat text-xneutral-0">
-                        Pengumuman
+                        Announcements
                     </h3>
                     <p class="font-montserrat text-sm sm:text-base text-xneutral-0 font-semibold">
-                        Dapatkan pengumuman terbaru
+                        Stay informed with the latest updates
                     </p>
                 </div>
                 <div>
