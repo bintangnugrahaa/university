@@ -34,13 +34,13 @@ class StudentResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone_number')
-                    ->tel()
                     ->required()
                     ->maxLength(15),
                 Forms\Components\TextInput::make('admission_path')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('image')
+                Forms\Components\FileUpload::make('image')
+                    ->image()
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('first_study_program')
@@ -66,6 +66,7 @@ class StudentResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('admission_path')
                     ->searchable(),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('first_study_program')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('second_study_program')
