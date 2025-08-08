@@ -12,15 +12,15 @@ class VisionMissionController extends Controller
         $visiMisi = Visimisi::first();
 
         if ($visiMisi) {
-            $visi = $visiMisi->visi;
-            $misi = $visiMisi->misi;
-            $visimisiImg = $visiMisi->image;
+            $vision = $visiMisi->vision;
+            $mission = $visiMisi->mission;
+            $image = $visiMisi->image;
         } else {
-            $visi = 'No Data Available';
-            $misi = 'No Data Available';
-            $visimisiImg = [];
+            $vision = 'No Data Available';
+            $mission = 'No Data Available';
+            $image = [];
         }
 
-        return view('visimisi', compact('visi', 'misi', 'visimisiImg'));
+        return view('visimisi', compact('vision', 'mission', 'image'));
     }
 }

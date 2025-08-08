@@ -37,14 +37,14 @@ class RegistrationController extends Controller
         }
 
         Student::create([
-            'namalengkap' => $request->namalengkap,
-            'email' => $request->email,
-            'jalur' => $request->jalur,
+            'full_name' => $request->input('namalengkap'),
+            'nickname' => $request->input('namapanggilan'),
+            'email' => $request->input('email'),
+            'phone_number' => $request->input('nomor_hp'),
+            'admission_path' => $request->input('jalur'),
             'image' => $fotoName,
-            'namapanggilan' => $request->namapanggilan,
-            'nomor_hp' => $request->nomor_hp,
-            'programstudi_1' => $request->programstudi_1,
-            'programstudi_2' => $request->programstudi_2,
+            'first_study_program' => $request->input('programstudi_1'),
+            'second_study_program' => $request->input('programstudi_2'),
         ]);
 
         return back()->with('success', 'Data berhasil ditambahkan!');
