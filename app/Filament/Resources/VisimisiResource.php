@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\VisimisiResource\Pages;
 use App\Filament\Resources\VisimisiResource\RelationManagers;
 use App\Models\Visimisi;
@@ -23,14 +24,18 @@ class VisimisiResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('vision')
+                TinyEditor::make('vision')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('mission')
+                TinyEditor::make('mission')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('image')
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->multiple()
                     ->required()
+                    ->minFiles(3)
+                    ->maxFiles(3)
                     ->columnSpanFull(),
             ]);
     }
@@ -39,6 +44,15 @@ class VisimisiResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('vision')
+                    ->wrap()
+                    ->html()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('mission')
+                    ->wrap()
+                    ->html()
+                    ->searchable(),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
