@@ -6,7 +6,7 @@
                 src="{{ $datafooter->image ? Storage::url($datafooter->image) : asset('/assets/images/B-Uni.png') }}"
                 alt="Logo B-Universitas" />
             <p class="text-medium text-xneutral-200 font-poppins text-sm mb-6">
-                Lihat Perkembangan kami diakun sosial media
+                Follow our progress on social media
             </p>
             <div class="flex items-center gap-11">
                 <a href="{{ $datafooter->link_instagram ?? 'null' }}"
@@ -54,13 +54,13 @@
         </div>
         <div>
             <h4 class="font-poppins font-semibold text-lg text-xneutral-300 mb-10">
-                Contact us
+                GMaps
             </h4>
             <div class="max-h-24">
                 <a href="{{ $datafooter->link_gmaps ?? 'null' }}" target="_blank" rel="noopener noreferrer">
                     <button
                         class="px-6 py-[14px] text-center w-full font-montserrat text-neutral-0 bg-white border text-lg font-semibold border-primary-200 text-primary-200 rounded-full">
-                        View GMaps
+                        View on Google Maps
                     </button>
                 </a>
             </div>
