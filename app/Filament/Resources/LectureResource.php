@@ -17,29 +17,29 @@ class LectureResource extends Resource
 {
     protected static ?string $model = Lecture::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-presentation-chart-bar';
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('nama')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('nidn')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('education')
+                Forms\Components\TextInput::make('pendidikan')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('position')
+                Forms\Components\TextInput::make('jabatan')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('topic')
+                Forms\Components\TextInput::make('topik')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
@@ -53,17 +53,17 @@ class LectureResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('nama')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('nidn')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('education')
+                Tables\Columns\TextColumn::make('pendidikan')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('position')
+                Tables\Columns\TextColumn::make('jabatan')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('topic')
+                Tables\Columns\TextColumn::make('topik')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')

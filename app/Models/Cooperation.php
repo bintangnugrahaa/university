@@ -9,11 +9,5 @@ class Cooperation extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'image',
-    ];
-
-    protected $casts = [
-        'image' => 'array',
-    ];
+    protected $guarded = [];
 }

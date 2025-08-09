@@ -17,36 +17,36 @@ class StudentResource extends Resource
 {
     protected static ?string $model = Student::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('full_name')
+                Forms\Components\TextInput::make('namalengkap')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('nickname')
+                Forms\Components\TextInput::make('namapanggilan')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('email')
                     ->email()
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('phone_number')
+                Forms\Components\TextInput::make('nomor_hp')
                     ->required()
                     ->maxLength(15),
-                Forms\Components\TextInput::make('admission_path')
+                Forms\Components\TextInput::make('jalur')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('first_study_program')
+                Forms\Components\TextInput::make('programstudi_1')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('second_study_program')
+                Forms\Components\TextInput::make('programstudi_2')
                     ->required()
                     ->maxLength(255),
             ]);
@@ -56,20 +56,20 @@ class StudentResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('full_name')
+                Tables\Columns\TextColumn::make('namalengkap')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('nickname')
+                Tables\Columns\TextColumn::make('namapanggilan')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('phone_number')
+                Tables\Columns\TextColumn::make('nomor_hp')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('admission_path')
+                Tables\Columns\TextColumn::make('jalur')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('first_study_program')
+                Tables\Columns\TextColumn::make('programstudi_1')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('second_study_program')
+                Tables\Columns\TextColumn::make('programstudi_2')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources;
 
-use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\GreetingResource\Pages;
 use App\Filament\Resources\GreetingResource\RelationManagers;
 use App\Models\Greeting;
@@ -14,11 +13,13 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+
 class GreetingResource extends Resource
 {
     protected static ?string $model = Greeting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-sparkles';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
 
     public static function form(Form $form): Form
     {

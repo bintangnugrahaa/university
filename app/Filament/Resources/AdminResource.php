@@ -17,19 +17,19 @@ class AdminResource extends Resource
 {
     protected static ?string $model = Admin::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-shield-check';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('nama')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('nip')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('position')
+                Forms\Components\TextInput::make('jabatan')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
@@ -42,11 +42,11 @@ class AdminResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                Tables\Columns\TextColumn::make('nama')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('nip')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('position')
+                Tables\Columns\TextColumn::make('jabatan')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('created_at')

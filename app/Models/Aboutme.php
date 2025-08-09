@@ -9,10 +9,7 @@ class Aboutme extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'content',
-        'image',
-    ];
+    protected $guarded = [];
 
     protected $casts = [
         'image' => 'array',

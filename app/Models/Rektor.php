@@ -9,13 +9,5 @@ class Rektor extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'position',
-        'image',
-    ];
-
-    protected $casts = [
-        'image' => 'array',
-    ];
+    protected $guarded = [];
 }

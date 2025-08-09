@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources;
 
-use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\FacilityResource\Pages;
 use App\Filament\Resources\FacilityResource\RelationManagers;
 use App\Models\Facility;
@@ -13,6 +12,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 
 class FacilityResource extends Resource
 {

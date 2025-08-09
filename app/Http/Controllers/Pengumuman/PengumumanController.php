@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Announcement;
+namespace App\Http\Controllers\Pengumuman;
 
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
 
-class AnnouncementController extends Controller
+class PengumumanController extends Controller
 {
-    public function index()
-    {
+    public function index(){
         $announcements = Announcement::all();
         return view('pengumuman.index', compact('announcements'));
     }

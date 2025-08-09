@@ -9,12 +9,5 @@ class Facility extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'content',
-        'image',
-    ];
-
-    protected $casts = [
-        'image' => 'array',
-    ];
+    protected $guarded = [];
 }

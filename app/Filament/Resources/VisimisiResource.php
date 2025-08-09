@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources;
 
-use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\VisimisiResource\Pages;
 use App\Filament\Resources\VisimisiResource\RelationManagers;
 use App\Models\Visimisi;
@@ -14,20 +13,22 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+
 class VisimisiResource extends Resource
 {
     protected static ?string $model = Visimisi::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-flag';
+    protected static ?string $navigationIcon = 'heroicon-o-eye';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TinyEditor::make('vision')
+                TinyEditor::make('visi')
                     ->required()
                     ->columnSpanFull(),
-                TinyEditor::make('mission')
+                TinyEditor::make('misi')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
@@ -44,11 +45,11 @@ class VisimisiResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('vision')
+                Tables\Columns\TextColumn::make('visi')
                     ->wrap()
                     ->html()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('mission')
+                Tables\Columns\TextColumn::make('misi')
                     ->wrap()
                     ->html()
                     ->searchable(),

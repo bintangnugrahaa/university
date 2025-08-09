@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
             $table->string('image')->notNullable();
-            $table->string('instagram_link')->notNullable();
-            $table->string('youtube_link')->notNullable();
-            $table->string('linkedin_link')->notNullable();
-            $table->string('facebook_link')->notNullable();
-            $table->string('address')->notNullable();
+            $table->string('link_instagram')->notNullable();
+            $table->string('link_youtube')->notNullable();
+            $table->string('link_linkedin')->notNullable();
+            $table->string('link_facebook')->notNullable();
+            $table->string('alamat')->notNullable();
             $table->string('email')->notNullable();
-            $table->string('whatsapp_number')->notNullable();
-            $table->string('google_maps_link')->notNullable();
+            $table->string('wa')->notNullable();
+            $table->string('link_gmaps')->notNullable();
             $table->timestamps();
         });
     }

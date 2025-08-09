@@ -8,14 +8,14 @@ use App\Filament\Resources\AnnouncementResource\RelationManagers;
 use App\Models\Announcement;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+
+use Filament\Forms\Set;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Auth;
 
 class AnnouncementResource extends Resource
 {
@@ -28,7 +28,7 @@ class AnnouncementResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->live(debounce: 1000)
+                    ->live(debounce:1000)
                     ->debounce(1000)
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state)))
                     ->required(),
@@ -38,7 +38,7 @@ class AnnouncementResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('users_id')
-                    ->default(Auth::user()->id)
+                    ->default(auth()->user()->id)
                     ->readOnly(),
             ]);
     }

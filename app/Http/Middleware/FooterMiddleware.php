@@ -17,7 +17,7 @@ class FooterMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $datafooter = Footer::first();
-        view()->share('datafooter', $datafooter);
+        view()->share('datafooter',$datafooter);
 
         return $next($request);
     }

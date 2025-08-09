@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources;
 
-use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\HistoryResource\Pages;
 use App\Filament\Resources\HistoryResource\RelationManagers;
 use App\Models\History;
@@ -14,11 +13,13 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
+
 class HistoryResource extends Resource
 {
     protected static ?string $model = History::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-clock';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form
     {

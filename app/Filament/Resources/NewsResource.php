@@ -2,21 +2,20 @@
 
 namespace App\Filament\Resources;
 
-use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 use App\Filament\Resources\NewsResource\Pages;
 use App\Filament\Resources\NewsResource\RelationManagers;
 use App\Models\News;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Auth;
 
+use Filament\Forms\Set;
+use Illuminate\Support\Str;
+use AmidEsfahani\FilamentTinyEditor\TinyEditor;
 
 class NewsResource extends Resource
 {
@@ -29,7 +28,7 @@ class NewsResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->live(debounce: 1000)
+                    ->live(debounce:1000)
                     ->debounce(1000)
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state)))
                     ->required(),
@@ -42,7 +41,7 @@ class NewsResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('users_id')
-                    ->default(Auth::user()->id)
+                    ->default(auth()->user()->id)
                     ->readOnly(),
             ]);
     }

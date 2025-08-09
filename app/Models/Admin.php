@@ -9,12 +9,7 @@ class Admin extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'nip',
-        'position',
-        'image',
-    ];
+    protected $guarded = [];
 
     protected $casts = [
         'image' => 'array',

@@ -17,7 +17,7 @@ class CooperationResource extends Resource
 {
     protected static ?string $model = Cooperation::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
+    protected static ?string $navigationIcon = 'heroicon-o-document-duplicate';
 
     public static function form(Form $form): Form
     {

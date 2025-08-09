@@ -4,24 +4,24 @@
         <div>
             <img class="mb-10"
                 src="{{ $datafooter->image ? Storage::url($datafooter->image) : asset('/assets/images/B-Uni.png') }}"
-                alt="B-University Logo" />
+                alt="Logo B-Universitas" />
             <p class="text-medium text-xneutral-200 font-poppins text-sm mb-6">
-                Follow our journey on social media
+                Lihat Perkembangan kami diakun sosial media
             </p>
             <div class="flex items-center gap-11">
-                <a href="{{ $datafooter->instagram_link ?? 'null' }}"
+                <a href="{{ $datafooter->link_instagram ?? 'null' }}"
                     class="w-8 h-8 grid place-content-center rounded-full bg-primary-200">
                     <i class="bi bi-instagram text-lg text-xneutral-0"></i>
                 </a>
-                <a href="{{ $datafooter->youtube_link ?? 'null' }}"
+                <a href="{{ $datafooter->link_youtube ?? 'null' }}"
                     class="w-8 h-8 grid place-content-center rounded-full bg-primary-200">
                     <i class="bi bi-youtube text-lg text-xneutral-0"></i>
                 </a>
-                <a href="{{ $datafooter->linkedin_link ?? 'null' }}"
+                <a href="{{ $datafooter->link_linkedin ?? 'null' }}"
                     class="w-8 h-8 grid place-content-center rounded-full bg-primary-200">
                     <i class="bi bi-linkedin text-sm text-xneutral-0"></i>
                 </a>
-                <a href="{{ $datafooter->facebook_link ?? 'null' }}"
+                <a href="{{ $datafooter->link_facebook ?? 'null' }}"
                     class="w-8 h-8 grid place-content-center rounded-full bg-primary-200">
                     <i class="bi bi-facebook text-lg text-xneutral-0"></i>
                 </a>
@@ -29,13 +29,13 @@
         </div>
         <div>
             <h4 class="font-poppins font-semibold text-lg text-xneutral-300 mb-10">
-                Contact Us
+                Contact us
             </h4>
             <div class="space-y-6">
                 <div class="flex gap-4">
                     <i class="bi bi-geo-alt-fill text-xneutral-200"></i>
                     <p class="font-poppins text-xneutral-200 text-sm">
-                        {{ $datafooter->address ?? 'null' }}
+                        {{ $datafooter->alamat ?? 'null' }}
                     </p>
                 </div>
                 <div class="flex gap-4">
@@ -47,20 +47,20 @@
                 <div class="flex gap-4">
                     <i class="bi bi-whatsapp text-xneutral-200"></i>
                     <p class="font-poppins text-xneutral-200 text-sm">
-                        {{ $datafooter->whatsapp_number ?? 'null' }}
+                        {{ $datafooter->wa ?? 'null' }}
                     </p>
                 </div>
             </div>
         </div>
         <div>
             <h4 class="font-poppins font-semibold text-lg text-xneutral-300 mb-10">
-                Find Us
+                Contact us
             </h4>
             <div class="max-h-24">
-                <a href="{{ $datafooter->google_maps_link ?? 'null' }}" target="_blank" rel="noopener noreferrer">
+                <a href="{{ $datafooter->link_gmaps ?? 'null' }}" target="_blank" rel="noopener noreferrer">
                     <button
                         class="px-6 py-[14px] text-center w-full font-montserrat text-neutral-0 bg-white border text-lg font-semibold border-primary-200 text-primary-200 rounded-full">
-                        View on Google Maps
+                        View GMaps
                     </button>
                 </a>
             </div>
@@ -69,7 +69,7 @@
     <div class="container">
         <hr class="mt-14 border-2 border-xneutral-300" />
         <p class="text-center my-6 font-poppins text-xneutral-200">
-            © 2025 | B-University. All rights reserved.
+            Copyright © 2025 | B University
         </p>
     </div>
 </footer>

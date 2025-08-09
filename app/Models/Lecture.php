@@ -9,17 +9,5 @@ class Lecture extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'nidn',
-        'education',
-        'position',
-        'email',
-        'topic',
-        'image',
-    ];
-
-    protected $casts = [
-        'image' => 'array',
-    ];
+    protected $guarded = [];
 }

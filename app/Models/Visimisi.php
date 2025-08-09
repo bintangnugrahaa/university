@@ -9,11 +9,7 @@ class Visimisi extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'vision',
-        'mission',
-        'image',
-    ];
+    protected $fillable = ['visi', 'misi', 'image'];
 
     protected $casts = [
         'image' => 'array',
