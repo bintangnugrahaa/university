@@ -14,7 +14,8 @@ class PendaftaranController extends Controller
         return view('pendaftaran');
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         // Validasi data yang diterima dari form
         $request->validate([
             'namalengkap' => 'required|string|max:255',
@@ -53,6 +54,6 @@ class PendaftaranController extends Controller
             'programstudi_2' => $request->programstudi_2,
         ]);
 
-        return back()->with('success', 'Data berhasil ditambahkan!');
+        return back()->with('success', 'Data has been successfully added!');
     }
 }
