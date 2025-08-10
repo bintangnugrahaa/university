@@ -29,7 +29,7 @@
         </div>
         <div>
             <h4 class="font-poppins font-semibold text-lg text-xneutral-300 mb-10">
-                Contact us
+                Contact Us
             </h4>
             <div class="space-y-6">
                 <div class="flex gap-4">

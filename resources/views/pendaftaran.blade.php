@@ -7,7 +7,7 @@
             Registration
         </h1>
         <p class="text-xneutral-200 font-montserrat text-sm sm:text-base font-semibold">
-            Join us for a brilliant future ahead
+            Enroll with us and shape a remarkable future
         </p>
 
         @if (session('success'))
@@ -25,41 +25,41 @@
                 setTimeout(function() {
                     var alert = document.getElementById('alert');
                     if (alert) {
-                        alert.style.opacity = '0'; // Change opacity to 0
-                        alert.style.transition = 'opacity 0.5s ease'; // Add transition effect
+                        alert.style.opacity = '0';
+                        alert.style.transition = 'opacity 0.5s ease';
                         setTimeout(function() {
-                            alert.style.display = 'none'; // Remove alert after transition effect
-                        }, 500); // Wait for transition to complete (0.5 seconds)
+                            alert.style.display = 'none';
+                        }, 500);
                     }
-                }, 3000); // 3000 ms = 3 seconds
+                }, 3000);
             </script>
         @endif
 
         <!-- Registration Form -->
         <form action="{{ route('pendaftaran.store') }}" method="post" enctype="multipart/form-data"
             class="space-y-6 mt-[70px]">
-            @csrf <!-- Add CSRF token for security -->
+            @csrf
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-[124px] font-montserrat">
                 <div class="space-y-10">
                     <div class="flex flex-col gap-3">
                         <label for="nama-lengkap" class="font-semibold text-sm text-xneutral-400">Full Name
                             <span class="text-secondary-error">*</span>
                         </label>
-                        <input type="text" id="nama-lengkap" name="namalengkap" placeholder="Enter Your Full Name"
+                        <input type="text" id="nama-lengkap" name="namalengkap" placeholder="Enter your full name"
                             required
                             class="border placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg" />
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <label for="email" class="font-semibold text-sm text-xneutral-400">Email
+                        <label for="email" class="font-semibold text-sm text-xneutral-400">Email Address
                             <span class="text-secondary-error">*</span>
                         </label>
-                        <input type="email" id="email" name="email" placeholder="Enter Your Email Address" required
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required
                             class="border placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg" />
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <label for="jalur" class="font-semibold text-sm text-xneutral-400">Admission Track
+                        <label for="jalur" class="font-semibold text-sm text-xneutral-400">Admission Pathway
                             <span class="text-secondary-error">*</span>
                         </label>
                         <div class="flex items-center">
@@ -74,12 +74,12 @@
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <label for="foto" class="font-semibold text-sm text-xneutral-400">Photo
+                        <label for="foto" class="font-semibold text-sm text-xneutral-400">Profile Photo
                             <span class="text-secondary-error">*</span>
                         </label>
                         <div class="flex gap-3 items-center w-full">
                             <input type="file" id="foto" name="image" accept="image/*" required
-                                placeholder="Upload Your Photo"
+                                placeholder="Upload your photo"
                                 class="border w-full file:hidden placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg" />
                             <button type="button"
                                 class="border text-nowrap bg-primary-200 text-xneutral-0 font-semibold py-[18px] px-6 rounded-lg">
@@ -95,7 +95,7 @@
                             <span class="text-secondary-error">*</span>
                         </label>
                         <input type="text" id="nama-panggilan" name="namapanggilan"
-                            placeholder="Enter Your Preferred Name" required
+                            placeholder="Enter your preferred name" required
                             class="border placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg" />
                     </div>
 
@@ -103,35 +103,36 @@
                         <label for="nomor-hp" class="font-semibold text-sm text-xneutral-400">Phone Number
                             <span class="text-secondary-error">*</span>
                         </label>
-                        <input type="tel" id="nomor-hp" name="nomor_hp" placeholder="Enter Your Phone Number" required
+                        <input type="tel" id="nomor-hp" name="nomor_hp" placeholder="Enter your phone number" required
                             class="border placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg" />
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <label for="program-studi-1" class="font-semibold text-sm text-xneutral-400">Study Program 1
+                        <label for="program-studi-1" class="font-semibold text-sm text-xneutral-400">First Study Program
+                            Choice
                             <span class="text-secondary-error">*</span>
                         </label>
                         <div class="flex items-center">
                             <select id="program-studi-1" name="programstudi_1" required
                                 class="border peer appearance-none w-full placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg">
-                                <option value="">Select Study Program 1</option>
-                                <option value="S1 KEPERAWATAN">S1 KEPERAWATAN</option>
-                                <option value="S1 KEBIDANAN">S1 KEBIDANAN</option>
-                                <option value="S1 FARMASI">S1 FARMASI</option>
-                                <option value="S1 ADMINISTRASI RUMAH SAKIT">S1 ADMINISTRASI RUMAH SAKIT</option>
-                                <option value="D3 KEBIDANAN">D3 KEBIDANAN</option>
-                                <option value="D3 FISIOTERAPI">D3 FISIOTERAPI</option>
-                                <option value="D3 FARMASI">D3 FARMASI</option>
-                                <option value="S1 MANAJEMEN">S1 MANAJEMEN</option>
-                                <option value="S1 AKUNTANSI">S1 AKUNTANSI</option>
-                                <option value="S1 EKONOMI SYARIAH">S1 EKONOMI SYARIAH</option>
-                                <option value="S1 KEWIRAUSAHAAN">S1 KEWIRAUSAHAAN</option>
-                                <option value="S1 PENDIDIKAN GURU SD">S1 PENDIDIKAN GURU SD</option>
-                                <option value="S1 BIOLOGI">S1 BIOLOGI</option>
-                                <option value="S1 FISIKA">S1 FISIKA</option>
-                                <option value="S1 TEKNIK KOMPUTER">S1 TEKNIK KOMPUTER</option>
-                                <option value="S1 TEKNIK INDUSTRI">S1 TEKNIK INDUSTRI</option>
-                                <option value="S1 TEKNIK INFORMATIKA">S1 TEKNIK INFORMATIKA</option>
+                                <option value="">Select your first study program</option>
+                                <option value="S1 KEPERAWATAN">Bachelor of Nursing</option>
+                                <option value="S1 KEBIDANAN">Bachelor of Midwifery</option>
+                                <option value="S1 FARMASI">Bachelor of Pharmacy</option>
+                                <option value="S1 ADMINISTRASI RUMAH SAKIT">Bachelor of Hospital Administration</option>
+                                <option value="D3 KEBIDANAN">Diploma in Midwifery</option>
+                                <option value="D3 FISIOTERAPI">Diploma in Physiotherapy</option>
+                                <option value="D3 FARMASI">Diploma in Pharmacy</option>
+                                <option value="S1 MANAJEMEN">Bachelor of Management</option>
+                                <option value="S1 AKUNTANSI">Bachelor of Accounting</option>
+                                <option value="S1 EKONOMI SYARIAH">Bachelor of Sharia Economics</option>
+                                <option value="S1 KEWIRAUSAHAAN">Bachelor of Entrepreneurship</option>
+                                <option value="S1 PENDIDIKAN GURU SD">Bachelor of Primary Education</option>
+                                <option value="S1 BIOLOGI">Bachelor of Biology</option>
+                                <option value="S1 FISIKA">Bachelor of Physics</option>
+                                <option value="S1 TEKNIK KOMPUTER">Bachelor of Computer Engineering</option>
+                                <option value="S1 TEKNIK INDUSTRI">Bachelor of Industrial Engineering</option>
+                                <option value="S1 TEKNIK INFORMATIKA">Bachelor of Informatics Engineering</option>
                             </select>
                             <i
                                 class="bi bi-chevron-down pointer-events-none -ml-8 peer-focus:rotate-180 transition-all"></i>
@@ -139,30 +140,31 @@
                     </div>
 
                     <div class="flex flex-col gap-3">
-                        <label for="program-studi-2" class="font-semibold text-sm text-xneutral-400">Study Program 2
+                        <label for="program-studi-2" class="font-semibold text-sm text-xneutral-400">Second Study Program
+                            Choice
                             <span class="text-secondary-error">*</span>
                         </label>
                         <div class="flex items-center">
                             <select id="program-studi-2" name="programstudi_2" required
                                 class="border peer appearance-none w-full placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg">
-                                <option value="">Select Study Program 2</option>
-                                <option value="S1 KEPERAWATAN">S1 KEPERAWATAN</option>
-                                <option value="S1 KEBIDANAN">S1 KEBIDANAN</option>
-                                <option value="S1 FARMASI">S1 FARMASI</option>
-                                <option value="S1 ADMINISTRASI RUMAH SAKIT">S1 ADMINISTRASI RUMAH SAKIT</option>
-                                <option value="D3 KEBIDANAN">D3 KEBIDANAN</option>
-                                <option value="D3 FISIOTERAPI">D3 FISIOTERAPI</option>
-                                <option value="D3 FARMASI">D3 FARMASI</option>
-                                <option value="S1 MANAJEMEN">S1 MANAJEMEN</option>
-                                <option value="S1 AKUNTANSI">S1 AKUNTANSI</option>
-                                <option value="S1 EKONOMI SYARIAH">S1 EKONOMI SYARIAH</option>
-                                <option value="S1 KEWIRAUSAHAAN">S1 KEWIRAUSAHAAN</option>
-                                <option value="S1 PENDIDIKAN GURU SD">S1 PENDIDIKAN GURU SD</option>
-                                <option value="S1 BIOLOGI">S1 BIOLOGI</option>
-                                <option value="S1 FISIKA">S1 FISIKA</option>
-                                <option value="S1 TEKNIK KOMPUTER">S1 TEKNIK KOMPUTER</option>
-                                <option value="S1 TEKNIK INDUSTRI">S1 TEKNIK INDUSTRI</option>
-                                <option value="S1 TEKNIK INFORMATIKA">S1 TEKNIK INFORMATIKA</option>
+                                <option value="">Select your second study program</option>
+                                <option value="S1 KEPERAWATAN">Bachelor of Nursing</option>
+                                <option value="S1 KEBIDANAN">Bachelor of Midwifery</option>
+                                <option value="S1 FARMASI">Bachelor of Pharmacy</option>
+                                <option value="S1 ADMINISTRASI RUMAH SAKIT">Bachelor of Hospital Administration</option>
+                                <option value="D3 KEBIDANAN">Diploma in Midwifery</option>
+                                <option value="D3 FISIOTERAPI">Diploma in Physiotherapy</option>
+                                <option value="D3 FARMASI">Diploma in Pharmacy</option>
+                                <option value="S1 MANAJEMEN">Bachelor of Management</option>
+                                <option value="S1 AKUNTANSI">Bachelor of Accounting</option>
+                                <option value="S1 EKONOMI SYARIAH">Bachelor of Sharia Economics</option>
+                                <option value="S1 KEWIRAUSAHAAN">Bachelor of Entrepreneurship</option>
+                                <option value="S1 PENDIDIKAN GURU SD">Bachelor of Primary Education</option>
+                                <option value="S1 BIOLOGI">Bachelor of Biology</option>
+                                <option value="S1 FISIKA">Bachelor of Physics</option>
+                                <option value="S1 TEKNIK KOMPUTER">Bachelor of Computer Engineering</option>
+                                <option value="S1 TEKNIK INDUSTRI">Bachelor of Industrial Engineering</option>
+                                <option value="S1 TEKNIK INFORMATIKA">Bachelor of Informatics Engineering</option>
                             </select>
                             <i
                                 class="bi bi-chevron-down pointer-events-none -ml-8 peer-focus:rotate-180 transition-all"></i>
@@ -178,7 +180,7 @@
                 </a>
                 <button type="submit"
                     class="px-6 py-[14px] text-center w-full font-montserrat text-neutral-0 bg-primary-200 border text-lg font-semibold border-primary-200 text-xneutral-0 rounded-full">
-                    Register
+                    Submit Registration
                 </button>
             </div>
         </form>
