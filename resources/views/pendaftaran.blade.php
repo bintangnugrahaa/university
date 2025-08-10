@@ -81,10 +81,6 @@
                             <input type="file" id="foto" name="image" accept="image/*" required
                                 placeholder="Upload your photo"
                                 class="border w-full file:hidden placeholder:font-semibold placeholder:text-xneutral-100 border-xneutral-100 py-[18px] px-6 rounded-lg" />
-                            <button type="button"
-                                class="border text-nowrap bg-primary-200 text-xneutral-0 font-semibold py-[18px] px-6 rounded-lg">
-                                Upload Photo
-                            </button>
                         </div>
                     </div>
                 </div>

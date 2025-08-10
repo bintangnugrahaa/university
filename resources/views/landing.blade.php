@@ -3,14 +3,13 @@
     <!-- HERO SECTION -->
     <section class="container min-h-[90vh] relative mt-28">
         <div id="hero-1"
-            class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]">
+            class="absolute top-0 animate-fade left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]">
             <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
                 <h1 class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7">
-                    Uniting Knowledge and Faith for a Brighter Future
+                    Faith and knowledge as one
                 </h1>
-                <span class="text-lg md:text-xl text-white font-montserrat font-medium">We are committed to cultivating
-                    exceptional generations who uphold
-                    religious values and academic excellence.</span>
+                <span class="text-lg md:text-xl text-white font-montserrat font-medium">Committed to nurturing generations of
+                    faith and excellence.</span>
             </div>
             <img src="../assets/images/hero-illustration-1.png" class="mr-12 sm:-mr-12 z-0 w-full lg:w-1/2 lg:portrait:w-4/5"
                 alt="Hero Image" />
@@ -33,7 +32,7 @@
             class="absolute animate-fade top-0 left-0 w-full h-full flex flex-col lg:flex-row lg:portrait:flex-col items-center justify-center rounded-[30px]">
             <div class="px-4 md:pl-12 w-full lg:w-1/2 lg:portrait:w-full">
                 <h1 class="text-4xl font-semibold font-montserrat md:text-5xl/[60px] text-white mb-7">
-                    Fostering Virtuous and Enlightened Generations
+                    Shaping Virtuous Generations
                 </h1>
                 <span class="text-lg md:text-xl text-white font-montserrat font-medium">We are here to guide you
                     in achieving academic excellence and
@@ -45,7 +44,7 @@
     </section>
 
     <div
-        class="container overflow-hidden w-fit md:px-16 py-5 rounded-3xl mx-4 sm:mx-auto -mt-32 bg-white z-10 relative shadow-2xl">
+        class="container overflow-hidden w-fit md:px-16 py-5 rounded-3xl mx-3 sm:mx-auto -mt-32 bg-white z-10 relative shadow-2xl">
         <h3 class="text-xl sm:text-2xl text-center w-full font-semibold font-montserrat mb-4">
             In Partnership With
         </h3>

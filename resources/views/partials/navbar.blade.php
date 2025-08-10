@@ -264,6 +264,13 @@
             <li>
                 <a href="{{ route('pengumuman') }}" class="font-semibold">Announcements</a>
             </li>
+
+            <li class="md:hidden pt-3">
+                <a href="{{ route('pendaftaran') }}"
+                    class="block w-full text-center px-6 py-3 font-montserrat font-semibold text-xneutral-0 bg-primary-200 rounded-full">
+                    Registration
+                </a>
+            </li>
         </ul>
     </div>
 </header>
